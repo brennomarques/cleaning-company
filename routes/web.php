@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ItemController;
+use App\Http\Controllers\{EmployeeController, SheduleController, ItemController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 Route::get('/items/{id}', [ItemController::class, 'exibir'])->name('items.exibir');
+Route::get('/funcionario', [EmployeeController::class, 'getAll'])->name('getAll');
+Route::get('/funcionario/{id}', [EmployeeController::class, 'search'])->name('search');
+Route::get('/horario', [SheduleController::class, 'getAll'])->name('getAll');

@@ -15,6 +15,10 @@ class CreateShedulesTable extends Migration
     {
         Schema::create('shedules', function (Blueprint $table) {
             $table->id();
+            $table->string('name', );
+            $table->string('day', 20);
+            $table->string('arrival');
+            $table->string('leave');
             $table->timestamps();
         });
     }
