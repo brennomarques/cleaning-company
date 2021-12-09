@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\{EmployeeController, SheduleController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/funcionario', [EmployeeController::class, 'getAll'])->name('getAll');
+Route::get('/funcionario/{id}', [EmployeeController::class, 'search'])->name('search');
+Route::get('/horario', [SheduleController::class, 'getAll'])->name('getAll');
