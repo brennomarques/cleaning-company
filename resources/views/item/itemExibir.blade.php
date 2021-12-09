@@ -7,13 +7,16 @@
     <title>Item exibir</title>
 </head>
 <body>
-           <li>Item: {{$item['item']}}</li>
-           <li>Quantidade: {{$item['quantidade']}}</li>
-           <li>Marca: {{$item['marca']}}</li> 
-           <li>Garantia: {{$item['garantia']}}</li> 
+    <h1>Detalhes do item</h1>
+    <li>Item: {{$item['item']}}</li>
+    <li>Quantidade: {{$item['quantidade']}}</li>
+    <li>Marca: {{$item['marca']}}</li> 
+    <li>Garantia: {{$item['garantia']}}</li> 
+    <br>
+        Quantidade aproximada de uso por dia durante um período de 20 dias :  {{$item['quantidade']/20}}
+    <br><br>
+        <a href="{{route('items.index')}}">Voltar</a>
+    <br>
            
-           <br>
-                <a href="{{route('items.index')}}">Voltar</a>
-           <br><br>
 </body>
 </html>
