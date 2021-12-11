@@ -1,6 +1,4 @@
 <img width="500" src="public/img/icon2.png">
-<br>
-<br>
 
 # Sistema de controle de funcionário
 
