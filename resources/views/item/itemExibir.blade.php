@@ -18,10 +18,10 @@
 
                     <tbody>
                         <th scope="row">{{$item['id']}}</th>
-                        <td>{{$item['item']}}</td>
-                        <td>{{$item['quantidade']}}</td>
-                        <td>{{$item['marca']}}</td>
-                        <td>{{$item['garantia']}}</td>
+                        <td>{{$item['name']}}</td>
+                        <td>{{$item['amount']}}</td>
+                        <td>{{$item['brand']}}</td>
+                        <td>{{$item['product_warranty']}}</td>
 
                     </tbody>
 

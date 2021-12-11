@@ -57,7 +57,7 @@
                             <div class='px-3 py-3 d-flex justify-content-between'>
                                 <h3 class='card-title'>Pontos de hoje</h3>
                                 <div class="card-right d-flex align-items-center">
-                                    <p>423 Registros</p>
+                                    <p>{{$records ?? 0}} Registros</p>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
         <div class="row mb-4 mt-5">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="color: #013d52;">
                         <h3 class='card-heading p-1 pl-3'>A pagar</h3>
                     </div>
                     <div class="card-body">
@@ -98,7 +98,7 @@
 
                 <div class="card widget-todo">
                     <div class="card-header border-bottom d-flex justify-content-between align-items-center">
-                        <h4 class="card-title d-flex">
+                        <h4 class="card-title d-flex" style="color: #013d52;">
                             <i class='bx bx-check font-medium-5 pl-25 pr-75'></i>Progresso de trabalho
                         </h4>
 

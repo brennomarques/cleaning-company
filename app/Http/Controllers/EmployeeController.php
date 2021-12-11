@@ -33,8 +33,9 @@ class EmployeeController extends Controller
         $users = DB::table('employees')->count();
         $items = DB::table('items')->count();
         $shedules = DB::table('shedules')->count();
+        $records = DB::table('shedules')->select(DB::raw('*'))->whereRaw('Date(created_at) = CURDATE()')->count();
 
-        return view("dashboard.dashboard", compact('users', 'total', 'items', 'shedules'));
+        return view("dashboard.dashboard", compact('users', 'total', 'items', 'shedules', 'records'));
     }
 
 }
