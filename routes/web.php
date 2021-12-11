@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::view('dashboard', 'dashboard/dashboard')->name('dashboard');;
+Route::get('/dashboard', [EmployeeController::class, 'generalSearch'])->name('dashboard');
+Route::redirect('/', 'dashboard', 301);
 
-Route::get('/items', [ItemController::class, 'index'])->name('items.index');
-Route::get('/items/{id}', [ItemController::class, 'exibir'])->name('items.exibir');
-Route::get('/funcionario', [EmployeeController::class, 'getAll'])->name('getAll');
-Route::get('/funcionario/{id}', [EmployeeController::class, 'search'])->name('search');
-Route::get('/horario', [SheduleController::class, 'getAll'])->name('getAll');
+Route::get('/items', [ItemController::class, 'index'])->name('items');
+Route::get('/items/{id}', [ItemController::class, 'search'])->name('searchItems');
+Route::get('/funcionario', [EmployeeController::class, 'getAll'])->name('employee');
+Route::get('/funcionario/{id}', [EmployeeController::class, 'search'])->name('searchEmployee');
+Route::get('/horario', [SheduleController::class, 'getShedule'])->name('shedule');

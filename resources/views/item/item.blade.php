@@ -1,21 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item</title>
-</head>
-<body>
-    <h1>Lista itens</h1>
-    @foreach($itens as $item)
-        <li> ID : {{$item['id']}} </li> 
-        <li> Item : {{$item['item']}}</li>
+@extends('simple.simple')
+@section('content')
+    <div class="d-flex justify-content-center mt-5" style="color: #013d52;">
+        <h1>Lista Items</h1>
+    </div>
 
-        <br>
-            <a href="{{route('items.exibir', $item['id'])}}">Ver detalhes </a> 
-        <br>
-        <br>
-    @endforeach
-</body>
-</html>
+    <div class="container mt-5 shadow-sm p-3 mb-5 bg-body rounded">
+        <table class="table">
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Ver</th>
+            </thead>
+            @foreach ($itens as $item)
+                <tbody>
+                    <th>{{$item->id}}</th>
+                    <td >{{$item->item}}</td>
+                    <td class="ml-5"><a href="{{route('searchItems', $item['id'])}}" class="btn btn-primary" title="Ver detalhes"><i class="fa fa-eye"></i></a></td>
+                </tbody>
+            @endforeach
+        </table>
+    </div>
+
+@endsection

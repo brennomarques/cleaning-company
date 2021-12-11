@@ -1,22 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item exibir</title>
-</head>
-<body>
-    <h1>Detalhes do item</h1>
-    <li>Item: {{$item['item']}}</li>
-    <li>Quantidade: {{$item['quantidade']}}</li>
-    <li>Marca: {{$item['marca']}}</li> 
-    <li>Garantia: {{$item['garantia']}}</li> 
-    <br>
-        Quantidade aproximada de uso por dia durante um período de 20 dias :  {{$item['quantidade']/20}}
-    <br><br>
-        <a href="{{route('items.index')}}">Voltar</a>
-    <br>
-           
-</body>
-</html>
+@extends('simple.simple')
+@section('content')
+
+    <div class="container">
+        <div class="d-flex justify-content-center mt-5" style="color: #013d52;">
+            <h1>Detalhes do item</h1>
+        </div>
+        <div class="container mt-5 shadow-sm p-3 mb-5 bg-body rounded">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Garantia</th>
+                </thead>
+
+                    <tbody>
+                        <th scope="row">{{$item['id']}}</th>
+                        <td>{{$item['item']}}</td>
+                        <td>{{$item['quantidade']}}</td>
+                        <td>{{$item['marca']}}</td>
+                        <td>{{$item['garantia']}}</td>
+
+                    </tbody>
+
+            </table>
+            <div class="d-flex justify-content-center mt-5 mb-5">
+                <a href="{{route('items')}}" class="btn btn-outline-primary btn-lg" title="Voltar">Voltar</a>
+            </div>
+
+        </div>
+    </div>
+@endsection
