@@ -12,4 +12,4 @@ Sistema criado em Laravel 8.
 * Execute o comando,  "php artisan migrate" para criar as tabelas já populadas.
 
 
-* [Documentação migrate](https://github.com/anuraghazra/github-readme-stats)
+* [Documentação migrate](https://laravel.com/docs/8.x/migrations)
