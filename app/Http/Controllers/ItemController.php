@@ -20,7 +20,7 @@ class ItemController extends Controller
             return redirect()->route('items');
         }
 
-        return view('item.itemExibir',compact('item'));
+        return view('item.showItem',compact('item'));
     }
 
     function countItems() {
