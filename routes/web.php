@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{EmployeeController, SheduleController, ItemController};
+use App\Http\Controllers\{EmployeeController, SheduleController, ItemController, DashboardController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::view('dashboard', 'dashboard/dashboard')->name('dashboard');;
-Route::get('/dashboard', [EmployeeController::class, 'generalSearch'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'generalSearch'])->name('dashboard');
 Route::redirect('/', 'dashboard', 301);
 
 Route::get('/items', [ItemController::class, 'index'])->name('items');

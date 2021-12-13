@@ -28,14 +28,4 @@ class EmployeeController extends Controller
         return view("dashboard.dashboard", compact('total'));
     }
 
-    function generalSearch() { // Solução paliativa para exibir dados na dashboard.
-        $total= DB::table('employees')->sum('payment');
-        $users = DB::table('employees')->count();
-        $items = DB::table('items')->count();
-        $shedules = DB::table('shedules')->count();
-        $records = DB::table('shedules')->select(DB::raw('*'))->whereRaw('Date(created_at) = CURDATE()')->count();
-
-        return view("dashboard.dashboard", compact('users', 'total', 'items', 'shedules', 'records'));
-    }
-
 }
