@@ -17,7 +17,7 @@
                     <th scope="row">{{$item->id}}</th>
                     <td>{{$item->name}}</td>
                     <td>{{$item->role}}</td>
-                    <td class="ml-5"><a href="{{route('searchEmployee', $item->id)}}" class="btn btn-primary" title="Ver detalhes"><i class="fa fa-eye"></i></a></td>
+                    <td class="ml-5"><a href="{{route('searchEmployee', $item->id)}}" class="btn btn-outline-primary" title="Ver detalhes"><i class="fa fa-eye"></i></a></td>
 
                 </tbody>
             @endforeach

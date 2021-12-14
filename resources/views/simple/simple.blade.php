@@ -39,6 +39,10 @@
                         <a class="nav-link" href="{{route('shedule')}}">Quadro de horas</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('document')}}">Documentos</a>
+                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Menu
@@ -47,6 +51,11 @@
                             <li><a class="dropdown-item" href="{{route('employee')}}">Funcionário</a></li>
                             <li><a class="dropdown-item" href="{{route('items')}}">Items</a></li>
                             <li><hr class="dropdown-divider"></li>
+
+                            <li><a class="dropdown-item" href="{{route('document')}}">Documentos</a></li>
+                            <li><a class="dropdown-item" href="{{route('newDocumento')}}">Novo documento</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
                             <li><a class="dropdown-item" href="{{route('shedule')}}">Quadro de horas</a></li>
                         </ul>
                     </li>

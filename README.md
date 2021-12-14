@@ -2,7 +2,7 @@
 
 # Sistema de controle de funcionário
 
-Sistema criado em Laravel 8.
+Sistema criado em Laravel 8, (Banco de dados não relacional)
 
 ## Instalação local
 * Execulte o comando, "composer install" para instalar as dependências.

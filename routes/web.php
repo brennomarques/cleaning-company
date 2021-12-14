@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{EmployeeController, SheduleController, ItemController, DashboardController};
+use App\Http\Controllers\{EmployeeController, SheduleController, ItemController, DashboardController, DocumentController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +23,9 @@ Route::get('/items/{id}', [ItemController::class, 'search'])->name('searchItems'
 Route::get('/funcionario', [EmployeeController::class, 'getAll'])->name('employee');
 Route::get('/funcionario/{id}', [EmployeeController::class, 'search'])->name('searchEmployee');
 Route::get('/horario', [SheduleController::class, 'getShedule'])->name('shedule');
+
+Route::get('/documento', [DocumentController::class, 'getAll'])->name('document');
+Route::get('/documento/criar', [DocumentController::class, 'newDocumento'])->name('newDocumento');
+Route::get('/documento/{id}', [DocumentController::class, 'searchDocument'])->name('searchDoc');
+Route::post('/documento', [DocumentController::class, 'createDocument'])->name('createDoc');
+Route::delete('/documento/{id}', [DocumentController::class, 'deleteDocument'])->name('deleteDoc');
